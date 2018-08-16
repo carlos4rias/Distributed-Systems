@@ -9,11 +9,8 @@ import (
 	"strings"
 )
 
-type HandleFunc func(a int, b int) string
-
 func eval(message string) string {
-	// var handler map[string]HandleFunc
-	// handler["sum"] = handleSum
+
 	values := strings.Split(message, " ")
 	if len(values) != 3 {
 		return "is not a valid operation"
